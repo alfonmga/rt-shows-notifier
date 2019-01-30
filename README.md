@@ -24,5 +24,6 @@ crontab -e
 */30 * * * * /Users/<user>/.nvm/versions/node/v8.10.0/bin/node /Users/<user>/Desktop/crons/rt-shows-notifier/app.js > /Users/<user>/Desktop/crons/rt-shows-notifier/logs/output.log 2> /Users/<user>/Desktop/crons/rt-shows-notifier/logs/error.log
 ```
 
-4. Done!
-@TODO
+## Preview:
+
+![preview](preview.png)
