@@ -30,7 +30,7 @@ crontab -e
 
 ## Why I built this?
 
-That's an easy question, because I love [Max Keiser](https://en.wikipedia.org/wiki/Max_Keiser) and his shows!
+That's an easy question, because I love [Max Keiser](https://en.wikipedia.org/wiki/Max_Keiser)'s shows!
 
 <p align="center">
   <img alt="Max Keiser" src="images/docs/max-keiser.jpg" />
