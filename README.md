@@ -19,11 +19,16 @@ npm install
 crontab -e
 ```
 
-3. Add the cron job (run every 30 minutes):
+3. Add a cron job to `crontab` (below cron job will run every 30 minutes):
 ```
-*/30 * * * * /Users/<user>/.nvm/versions/node/v8.10.0/bin/node /Users/<user>/Desktop/crons/rt-shows-notifier/app.js > /Users/<user>/Desktop/crons/rt-shows-notifier/logs/output.log 2> /Users/<user>/Desktop/crons/rt-shows-notifier/logs/error.log
+*/30 * * * * <path-to-node-bin> <rt-shows-notifier-path-dir>/app.js > <rt-shows-notifier-path-dir>/logs/output.log 2> <rt-shows-notifier-path-dir>/logs/error.log
 ```
 
 ## Preview:
 
 ![preview](preview.png)
+
+
+## Why I built this?
+
+@TODO
