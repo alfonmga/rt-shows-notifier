@@ -1,0 +1,18 @@
+{
+  "name": "rt-shows-notifier",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Alfonso Manuel García Astorga <alfon@amgaventures.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "lowdb": "^1.0.0",
+    "node-notifier": "^5.3.0",
+    "request": "^2.88.0"
+  }
+}
