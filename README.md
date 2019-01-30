@@ -32,6 +32,8 @@ crontab -e
 
 That's an easy question, because I love [Max Keiser](https://en.wikipedia.org/wiki/Max_Keiser) and his shows!
 
-![Max Keiser](images/docs/max-keiser.jpg)
+<p align="center">
+  <img alt="Max Keiser" src="images/docs/max-keiser.jpg" />
+</p>
 
 Keiser has advised investors to [buy bitcoin](https://bitcointalk.org/index.php?topic=10949.msg156512#msg156512) and precious metals such as gold and silver, in order to undermine "the banksters" since 2011.
