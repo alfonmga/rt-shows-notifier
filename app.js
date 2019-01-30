@@ -3,6 +3,10 @@ const notifier = require("node-notifier");
 const cheerio = require("cheerio");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
+const log = require("simple-node-logger").createSimpleLogger({
+  logFilePath: `${__dirname}/logs.log`,
+  timestampFormat: "YYYY-MM-DD HH:mm:ss.SSS"
+});
 
 const adapter = new FileSync(`${__dirname}/db.json`);
 const db = low(adapter);
@@ -28,7 +32,7 @@ const TARGET_SHOWS = [
 
 TARGET_SHOWS.forEach(show => {
   request(show.scrapeUrl, function(err, response, body) {
-    if (err) throw err;
+    if (err) return log.error(err.message);
 
     if (response.statusCode === 200) {
       const $ = cheerio.load(body);
@@ -47,12 +51,7 @@ TARGET_SHOWS.forEach(show => {
           .push({ id: show.id, lastUrl: latestShowRelativeUrl })
           .write();
 
-        const date = new Date();
-        console.log(
-          `${date.toLocaleDateString()} ${date.toLocaleTimeString()} ${
-            show.name
-          } – ${latestShowTitle}`
-        );
+        log.info(`${show.name} – ${latestShowTitle}`);
 
         notifier.notify(
           {
@@ -66,7 +65,7 @@ TARGET_SHOWS.forEach(show => {
             timeout: 3600
           },
           function(err) {
-            if (err) throw err;
+            if (err) log.error(err.message);
           }
         );
       }

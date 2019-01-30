@@ -262,7 +262,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-lodash@4, lodash@^4.15.0:
+lodash@4, lodash@^4.15.0, lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -285,6 +285,11 @@ mime-types@^2.1.12, mime-types@~2.1.19:
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.21.tgz#28995aa1ecb770742fe6ae7e58f9181c744b3f96"
   dependencies:
     mime-db "~1.37.0"
+
+moment@^2.20.1:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 node-notifier@^5.3.0:
   version "5.3.0"
@@ -383,6 +388,14 @@ semver@^5.5.0:
 shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
+
+simple-node-logger@^18.12.21:
+  version "18.12.21"
+  resolved "https://registry.yarnpkg.com/simple-node-logger/-/simple-node-logger-18.12.21.tgz#9efd084f18acfdead27cad1254d7af3f74768246"
+  integrity sha512-I2dA9JLiNrdTsmOI2bT0mIQNEKhTKbj9OM8tny3Il/5R6QdJHlWrv1NDdS+6UQHEnYV1413FnwgqTjzmV0ctCw==
+  dependencies:
+    lodash "^4.17.10"
+    moment "^2.20.1"
 
 sshpk@^1.7.0:
   version "1.16.1"
