@@ -2,8 +2,8 @@
 > Used modules: **Lowdb**, **Request**, **Cheerio** and **node-notifier**.
 
 Current shows supported:
-- Keiser Report
-- GONZO
+- [Keiser Report](https://www.rt.com/shows/keiser-report)
+- [GONZO](https://www.rt.com/shows/gonzo)
 
 ## Usage:
 
