@@ -61,7 +61,7 @@ TARGET_SHOWS.forEach(show => {
             message: "Click to watch now",
             sound: "Glass",
             open: `https://www.rt.com${latestShowRelativeUrl}`,
-            icon: `${__dirname}/img/${show.img}`,
+            icon: `${__dirname}/images/${show.img}`,
             wait: true,
             timeout: 3600
           },
