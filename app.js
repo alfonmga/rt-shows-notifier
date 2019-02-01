@@ -41,17 +41,26 @@ TARGET_SHOWS.forEach(show => {
       const latestShowRelativeUrl = latestShow.attr("href");
       const latestShowTitle = latestShow.html().trim();
 
-      const lastShowNotified = db
+      const LATEST_SHOW_URL = `https://www.rt.com${latestShowRelativeUrl}`;
+
+      const lastShowDb = db
         .get("shows")
-        .find({ id: show.id, lastUrl: latestShowRelativeUrl })
+        .find({ id: show.id })
         .value();
 
-      if (!lastShowNotified) {
-        db.get("shows")
-          .push({ id: show.id, lastUrl: latestShowRelativeUrl })
-          .write();
+      if (!lastShowDb || lastShowDb.url !== LATEST_SHOW_URL) {
+        if (!lastShowDb) {
+          db.get("shows")
+            .push({ id: show.id, url: LATEST_SHOW_URL })
+            .write();
+        } else {
+          db.get("shows")
+            .find({ id: show.id })
+            .assign({ url: LATEST_SHOW_URL })
+            .write();
+        }
 
-        log.info(`${show.name} – ${latestShowTitle}`);
+        log.info(`${show.name} – ${latestShowTitle} – ${LATEST_SHOW_URL}`);
 
         notifier.notify(
           {
@@ -59,7 +68,7 @@ TARGET_SHOWS.forEach(show => {
             subtitle: latestShowTitle,
             message: "Click to watch now",
             sound: "Glass",
-            open: `https://www.rt.com${latestShowRelativeUrl}`,
+            open: LATEST_SHOW_URL,
             icon: `${__dirname}/images/${show.img}`,
             wait: true,
             timeout: 3600
