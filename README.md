@@ -21,7 +21,7 @@ crontab -e
 
 3. Add a cron job to `crontab` (below cron job will run every 30 minutes):
 ```
-*/30 * * * * <path-to-node-bin> <rt-shows-notifier-path-dir>/app.js > <rt-shows-notifier-path-dir>/logs/output.log 2> <rt-shows-notifier-path-dir>/logs/error.log
+*/30 * * * * <path-to-node-bin> <rt-shows-notifier-path-dir>/app.js
 ```
 
 ## Preview:
