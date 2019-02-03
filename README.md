@@ -11,7 +11,7 @@ Current shows supported:
 ```
 git clone https://github.com/alfonmga/rt-shows-notifier
 cd rt-shows-notifier/
-npm install
+yarn install
 ```
 
 2. Run `crontab` editor:
